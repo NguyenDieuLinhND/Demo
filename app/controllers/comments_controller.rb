@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 
   def create
-    @cmt = current_user.comments.build comment_params
-    if @cmt.save
+    @comment = current_user.comments.build comment_params
+    if @comment.save
       redirect_to root_url
     else
       flash[:danger] = "Fail!"
